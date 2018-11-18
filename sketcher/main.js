@@ -145,7 +145,7 @@ async function loadDict() {
     if (mode == 'ar')
         loc = 'model2/class_names_ar.txt'
     else
-        loc = 'model2/class_names.txt'
+        loc = 'model3/class_names.txt'
     
     await $.ajax({
         url: loc,
@@ -222,7 +222,7 @@ async function start(cur_mode) {
     mode = cur_mode
     
     //load the model 
-    model = await tf.loadModel('model2/model.json')
+    model = await tf.loadModel('model3/model.json')
     
     //warm up 
     model.predict(tf.zeros([1, 28, 28, 1]))
@@ -239,10 +239,8 @@ allow drawing on canvas
 */
 function allowDrawing() {
     canvas.isDrawingMode = 1;
-    if (mode == 'en')
-        document.getElementById('status').innerHTML = 'Model Loaded';
-    else
-        document.getElementById('status').innerHTML = 'تم التحميل';
+    document.getElementById('status').innerHTML = 'Model Loaded';
+    
     $('button').prop('disabled', false);
     var slider = document.getElementById('myRange');
     slider.oninput = function() {
