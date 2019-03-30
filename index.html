@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>tracking.js - face with camera</title>
+
+  <script src="tracking-min.js"></script>
+  <script src="data/face-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  
+  
+  <style>
+  video, canvas {
+    margin-left: 200px;
+    margin-top: 0;
+    position: absolute;
+    order: 1;
+  }
+  #emoji {
+    font-size: 72px;
+    align-self: flex-end;
+    margin-left: 600px;
+  }
+  .demo-title {
+      font-family: monospace;
+  }
+  </style>
+</head>
+<body>
+  <div class="demo-title">
+      <h1>Emotion recognition!</h1>
+                                    <!-- THANKS TO -->
+    <!-- <p><a href="http://trackingjs.com" target="_parent">tracking.js</a> － get user's webcam and detect faces</p> -->
+  </div>
+
+  <div class="demo-frame">
+    <div class="demo-container">
+        <div style="display: flex; flex-direction: row;margin-top: 100px;justify-content: flex-start;">
+            <video id="video" width="320" height="240" preload autoplay loop muted></video>
+            <canvas id="canvas" width="320" height="240"></canvas>
+            <p id="emoji">😐</p>
+        </div>
+    </div>
+  </div>
+
+  <script src="emotions.js"></script>
+
+</body>
+</html>
