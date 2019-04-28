@@ -23,7 +23,7 @@ let updateGifIndex;
 let uploadBtn;
 
 const msgArray = ['A', 'B'];
-let gifSrcs = ['uparrow.png', 'downarrow.png'];
+let gifSrcs = ['downarrow.png', 'uparrow.png'];
 let soundfiles = [];
 let outputGif = true;
 let outputSound = false;
