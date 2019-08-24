@@ -1,15 +1,3 @@
-/*
-===
-Simple Teachable Machine (gif output) Demo
-Nov 2017:
-Original version by @yining1023
-Feb 2018:
-Sound output added by @achimkoh
-===
-*/
-
-
-
 let knn;
 let video;
 let isPredicting = false;
@@ -23,7 +11,7 @@ let updateGifIndex;
 let uploadBtn;
 
 const msgArray = ['A', 'B'];
-let gifSrcs = ['uparrow.png', 'downarrow.png'];
+let gifSrcs = ['downarrow.png', 'uparrow.png'];
 let soundfiles = [];
 let outputGif = true;
 let outputSound = false;
